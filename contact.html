@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | New Hair Images</title>
+    <title>Contact Us | Visit New Hair Images Midrand</title>
+    <meta name="description" content="Visit us at 61 Albertyn Street, Vorna Valley. Call 072 766 6313 for bookings and chair rental inquiries.">
     <style>
         :root { --gold: #D4AF37; --black: #000000; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
@@ -15,8 +16,10 @@
         .logo-container img { height: 120px; }
         .container { padding: 80px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; }
         h2 { color: var(--gold); margin-bottom: 30px; font-size: 2.5rem; text-transform: uppercase; }
-        .info-box h3 { color: var(--gold); margin-bottom: 10px; text-transform: uppercase; }
+        .info-box h3 { color: var(--gold); margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; }
         .info-box p { margin-bottom: 15px; color: #ccc; }
+        .info-box a { color: white; text-decoration: none; transition: 0.3s; }
+        .info-box a:hover { color: var(--gold); }
         input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: var(--gray); border: 1px solid var(--gold); color: white; outline: none; }
         button { padding: 18px; background: var(--gold); border: 2px solid var(--gold); font-weight: bold; text-transform: uppercase; width: 100%; cursor: pointer; transition: 0.3s; }
         button:hover { background: transparent; color: var(--gold); }
@@ -41,18 +44,18 @@
         <div class="info-box">
             <h2>Get In Touch</h2>
             <h3>Address</h3>
-            <p>61 Albertyn Street<br>Vorna Valley, Midrand</p>
+            <p><a href="https://maps.google.com/?q=61+Albertyn+Street+Vorna+Valley+Midrand" target="_blank">61 Albertyn Street<br>Vorna Valley, Midrand</a></p>
             <h3>Contact</h3>
-            <p>072 766 6313</p>
+            <p><a href="tel:0727666313">072 766 6313</a></p>
             <h3>Email</h3>
-            <p>Simangele2322@gmail.com</p>
+            <p><a href="mailto:Simangele2322@gmail.com">Simangele2322@gmail.com</a></p>
         </div>
         <div class="form-box">
             <h2>Message Us</h2>
-            <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea rows="4" placeholder="Job Inquiry or Booking Request"></textarea>
+            <form action="mailto:Simangele2322@gmail.com" method="post" enctype="text/plain">
+                <input type="text" placeholder="Full Name" name="Name" required>
+                <input type="email" placeholder="Email Address" name="Email" required>
+                <textarea rows="4" placeholder="Job Inquiry or Chair Rental Request" name="Message"></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </div>
