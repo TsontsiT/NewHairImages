@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | New Hair Images Trends</title>
+    <style>
+        :root { --gold: #D4AF37; --black: #000000; --gray: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--black); color: white; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
+        .brand-block { display: flex; align-items: center; gap: 20px; }
+        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; }
+        .logo-container img { height: 120px; }
+        .container { padding: 60px 10%; }
+        h2 { color: var(--gold); text-align: center; margin-bottom: 50px; font-size: 2.5rem; text-transform: uppercase; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .blog-card { background: var(--gray); border: 1px solid var(--gold); transition: 0.3s; }
+        .blog-card:hover { transform: translateY(-5px); }
+        .blog-img { height: 200px; background: #333; width: 100%; }
+        .blog-info { padding: 25px; }
+        .blog-info h3 { color: var(--gold); margin-bottom: 15px; text-transform: uppercase; }
+        .blog-info p { color: #ccc; font-size: 0.9rem; margin-bottom: 20px; }
+        .read-more { color: var(--gold); text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="brand-block">
+            <span class="brand-name">New Hair Images</span>
+            <div class="logo-container"><img src="1000142962.jpg" alt="Logo"></div>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Latest News & Trends</h2>
+        <div class="blog-grid">
+            <!-- Discussion 1: Community Focus -->
+            <article class="blog-card">
+                <div class="blog-img" style="background: url('blog_01.jpg') center/cover;"></div>
+                <div class="blog-info">
+                    <h3>The Heart of Vorna Valley</h3>
+                    <p>Discover why New Hair Images is more than a salon. We discuss our commitment to the Midrand community and the importance of supporting local business[cite: 1, 2]...</p>
+                    <a href="#" class="read-more">Read Full Post</a>
+                </div>
+            </article>
+
+            <!-- Discussion 2: Style Focus -->
+            <article class="blog-card">
+                <div class="blog-img" style="background: url('blog_02.jpg') center/cover;"></div>
+                <div class="blog-info">
+                    <h3>2026 Midrand Style Trends</h3>
+                    <p>From classic fades to modern nail artistry, our experts break down the top trends hitting the streets of Midrand this season[cite: 1, 2]...</p>
+                    <a href="#" class="read-more">Read Full Post</a>
+                </div>
+            </article>
+
+            <!-- Discussion 3: Professional Focus -->
+            <article class="blog-card">
+                <div class="blog-img" style="background: url('blog_03.jpg') center/cover;"></div>
+                <div class="blog-info">
+                    <h3>Empowering Local Professionals</h3>
+                    <p>Learn about our station rental program. At R449/day, we provide the platform for local stylists to build their dreams at 61 Albertyn Street[cite: 1, 2]...</p>
+                    <a href="#" class="read-more">Read Full Post</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | New Hair Images</title>
+    <meta name="description" content="Learn about the master stylists behind New Hair Images in Vorna Valley.">
+    <style>
+        :root { --gold: #D4AF37; --black: #000000; --white: #ffffff; --gray: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--black); color: var(--white); }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+        .brand-block { display: flex; align-items: center; gap: 20px; }
+        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-container img { height: 120px; }
+        .container { padding: 80px 15%; line-height: 1.8; }
+        h2 { color: var(--gold); margin-bottom: 30px; font-size: 2.5rem; text-transform: uppercase; text-align: center; }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-text p { margin-bottom: 20px; color: #ccc; }
+        .about-image { border: 2px solid var(--gold); height: 500px; background: url('image_about.jpg') center/cover; position: relative; }
+        .about-image::after { content: "Team Photo Placeholder"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--gold); opacity: 0.5; font-weight: bold; text-transform: uppercase; }
+        .owner-quote { margin-top: 40px; padding: 30px; background: var(--gray); border-left: 4px solid var(--gold); font-style: italic; }
+        .owner-quote span { display: block; margin-top: 15px; font-style: normal; color: var(--gold); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="brand-block">
+            <span class="brand-name">New Hair Images</span>
+            <div class="logo-container"><img src="1000142962.jpg" alt="Logo"></div>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Our Story</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Located at 61 Albertyn Street in Vorna Valley[cite: 1, 2], New Hair Images has become a vital cornerstone for the Midrand community[cite: 1, 2]. We provide a sophisticated haven where professionalism and local artistry converge to create exceptional results[cite: 1, 2].</p>
+                <p>Our mission is to offer a premium grooming experience that combines masterful styling with a high-end atmosphere[cite: 1, 2]. We believe that every resident of Midrand deserves access to world-class hair and nail care right in their own neighborhood[cite: 1, 2].</p>
+                <div class="owner-quote">
+                    "My vision for New Hair Images was to create a space where every client feels like a masterpiece. We are honored to be your first choice for professional grooming in Vorna Valley."
+                    <span>— Simangele, Founder[cite: 1, 2]</span>
+                </div>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </div>
+</body>
+</html>

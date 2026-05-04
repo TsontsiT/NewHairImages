@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Lookbook of New Hair Images</title>
+    <title>Gallery | New Hair Images</title>
     <style>
-        :root { --gold: #D4AF37; --black: #000000; --white: #ffffff; --gray: #1a1a1a; }
+        :root { --gold: #D4AF37; --black: #000000; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: var(--black); color: var(--white); }
+        body { background: var(--black); color: white; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin-right: 25px; font-weight: bold; text-transform: uppercase; }
+        nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
         .brand-block { display: flex; align-items: center; gap: 20px; }
-        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; }
         .logo-container img { height: 120px; }
         .container { padding: 60px 10%; }
         h2 { color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 2.5rem; text-transform: uppercase; }
@@ -25,29 +25,28 @@
     <header>
         <nav>
             <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
         <div class="brand-block">
             <span class="brand-name">New Hair Images</span>
-            <div class="logo-container">
-                <img src="1000142962.jpg" alt="New Hair Images Logo">
-            </div>
+            <div class="logo-container"><img src="1000142962.jpg" alt="Logo"></div>
         </div>
     </header>
     <div class="container">
         <h2>Style Showcase</h2>
         <div class="gallery-grid">
-            <!-- Simplified Generic Naming -->
-            <div class="gallery-item"><img src="image_01.jpg" alt="Hair Style 1"></div>
-            <div class="gallery-item"><img src="image_02.jpg" alt="Hair Style 2"></div>
-            <div class="gallery-item"><img src="image_03.jpg" alt="Hair Style 3"></div>
-            <div class="gallery-item"><img src="image_04.jpg" alt="Hair Style 4"></div>
-            <div class="gallery-item"><img src="image_05.jpg" alt="Hair Style 5"></div>
-            <div class="gallery-item"><img src="image_06.jpg" alt="Hair Style 6"></div>
-            <div class="gallery-item"><img src="image_07.jpg" alt="Hair Style 7"></div>
-            <div class="gallery-item"><img src="image_08.jpg" alt="Hair Style 8"></div>
+            <div class="gallery-item"><img src="image_01.jpg" alt="Style 1"></div>
+            <div class="gallery-item"><img src="image_02.jpg" alt="Style 2"></div>
+            <div class="gallery-item"><img src="image_03.jpg" alt="Style 3"></div>
+            <div class="gallery-item"><img src="image_04.jpg" alt="Style 4"></div>
+            <div class="gallery-item"><img src="image_05.jpg" alt="Style 5"></div>
+            <div class="gallery-item"><img src="image_06.jpg" alt="Style 6"></div>
+            <div class="gallery-item"><img src="image_07.jpg" alt="Style 7"></div>
+            <div class="gallery-item"><img src="image_08.jpg" alt="Style 8"></div>
         </div>
     </div>
 </body>
