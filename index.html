@@ -4,28 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Hair Images | Luxury Salon & Barber in Midrand</title>
-    <meta name="description" content="Premium hair styling, barbering, and nail services in Vorna Valley, Midrand. Book your transformation at New Hair Images today.">
-    <meta name="keywords" content="Hair Salon Midrand, Barber Vorna Valley, Nail Technician Midrand, New Hair Images, Hairdresser 61 Albertyn Street">
-    <meta property="og:title" content="New Hair Images | Midrand's Premier Salon">
-    <meta property="og:description" content="Expert styling and transformative care at 61 Albertyn Street, Vorna Valley.">
-    <meta property="og:image" content="1000142962.jpg">
     <style>
         :root { --gold: #D4AF37; --black: #000000; --white: #ffffff; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: var(--black); color: var(--white); display: flex; flex-direction: column; min-height: 100vh; }
+        body { background: var(--black); color: var(--white); }
+        
         header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
+        nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; }
         nav a:hover { color: var(--gold); }
+        
         .brand-block { display: flex; align-items: center; gap: 20px; }
         .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
-        .logo-container img { height: 120px; width: auto; display: block; }
-        .hero { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920'); background-size: cover; padding: 20px; }
-        .hero h1 { font-size: 4rem; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
-        .btn { padding: 15px 40px; background: var(--gold); color: black; text-decoration: none; font-weight: bold; text-transform: uppercase; border: 2px solid var(--gold); transition: 0.3s; }
+        .logo-container img { height: 120px; }
+
+        /* Restored Hero Section with Image */
+        .hero { 
+            height: 80vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            /* Using a high-end salon image link to ensure it shows up */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover; 
+            background-position: center;
+            padding: 20px; 
+            border-bottom: 1px solid var(--gold);
+        }
+        .hero h1 { font-size: 4.5rem; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 5px; }
+        .hero p { font-size: 1.5rem; margin-bottom: 40px; letter-spacing: 1px; }
+        
+        .btn { padding: 18px 50px; background: var(--gold); color: black; text-decoration: none; font-weight: bold; text-transform: uppercase; border: 2px solid var(--gold); transition: 0.3s; }
         .btn:hover { background: transparent; color: var(--gold); }
-        footer { background: var(--black); border-top: 1px solid var(--gray); padding: 40px 5%; text-align: center; }
-        .social-links a { color: var(--white); text-decoration: none; margin: 0 15px; font-size: 0.9rem; letter-spacing: 1px; transition: 0.3s; }
-        .social-links a:hover { color: var(--gold); }
+
+        /* Engagement Section */
+        .browse-section { padding: 80px 15%; text-align: center; background: var(--black); }
+        .browse-section h2 { color: var(--gold); margin-bottom: 20px; text-transform: uppercase; font-size: 2rem; }
+        .browse-section p { max-width: 850px; margin: 0 auto 50px; line-height: 1.8; color: #ccc; font-size: 1.1rem; }
+        
+        .nav-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .nav-card { border: 1px solid #333; padding: 30px; transition: 0.4s; text-decoration: none; color: var(--gold); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; display: flex; flex-direction: column; justify-content: center; }
+        .nav-card:hover { border-color: var(--gold); background: var(--gray); transform: translateY(-5px); }
+        .nav-card span { color: #888; font-size: 0.8rem; margin-top: 10px; font-weight: normal; text-transform: none; }
     </style>
 </head>
 <body>
@@ -35,26 +56,40 @@
             <a href="about.html">About</a>
             <a href="services.html">Services</a>
             <a href="gallery.html">Gallery</a>
+            <a href="specials.html">Specials</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
         <div class="brand-block">
             <span class="brand-name">New Hair Images</span>
-            <div class="logo-container"><img src="1000142962.jpg" alt="New Hair Images Logo"></div>
+            <div class="logo-container"><img src="1000142962.jpg" alt="Logo"></div>
         </div>
     </header>
+
     <section class="hero">
-        <h1>New Hair Images</h1>
-        <p style="margin-bottom: 30px; font-size: 1.4rem;">Masterful Styling. Premium Experience.</p>
-        <a href="contact.html" class="btn">Book Appointment</a>
+        <h1>Masterful Styling</h1>
+        <p>Premium Grooming Excellence in Vorna Valley, Midrand[cite: 1]</p>
+        <a href="contact.html" class="btn">Book Your Session</a>
     </section>
-    <footer>
-        <div class="social-links">
-            <a href="#">INSTAGRAM</a>
-            <a href="#">FACEBOOK</a>
-            <a href="https://wa.me/27727666313" target="_blank">WHATSAPP</a>
+
+    <section class="browse-section">
+        <h2>Experience More at New Hair Images</h2>
+        <p>Your transformation journey doesn't stop at a great haircut. We invite you to explore our boutique salon at 61 Albertyn Street[cite: 1]. Browse our latest seasonal promotions, view the precision artistry in our gallery, or stay updated with the latest grooming trends in Midrand through our blog[cite: 1, 2].</p>
+        
+        <div class="nav-cards">
+            <a href="specials.html" class="nav-card">
+                Monthly Specials
+                <span>Save on Manicures & Wigs</span>
+            </a>
+            <a href="gallery.html" class="nav-card">
+                Style Gallery
+                <span>Our Portfolio of Excellence</span>
+            </a>
+            <a href="blog.html" class="nav-card">
+                The Blog
+                <span>Tips, Trends & Career News</span>
+            </a>
         </div>
-        <p style="font-size: 0.8rem; color: #666; margin-top: 20px;">&copy; 2026 New Hair Images. All Rights Reserved.</p>
-    </footer>
+    </section>
 </body>
 </html>

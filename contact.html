@@ -3,39 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | New Hair Images Midrand</title>
+    <title>Contact | New Hair Images</title>
     <style>
         :root { --gold: #D4AF37; --black: #000000; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background: var(--black); color: white; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin-right: 20px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
+        nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
         .brand-block { display: flex; align-items: center; gap: 20px; }
-        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; }
         .logo-container img { height: 120px; }
         .container { padding: 80px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; }
-        h2 { color: var(--gold); margin-bottom: 30px; font-size: 2.5rem; text-transform: uppercase; }
-        .info-box h3 { color: var(--gold); margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; margin-top: 25px; }
-        .info-box p { margin-bottom: 15px; color: #ccc; }
-        .info-box a { color: white; text-decoration: none; transition: 0.3s; }
-        .info-box a:hover { color: var(--gold); }
-        .social-links { margin-top: 30px; display: flex; gap: 20px; border-top: 1px solid #333; padding-top: 20px; }
-        .social-links a { color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: var(--gray); border: 1px solid var(--gold); color: white; outline: none; }
-        button { padding: 18px; background: var(--gold); border: 2px solid var(--gold); font-weight: bold; text-transform: uppercase; width: 100%; cursor: pointer; transition: 0.3s; }
-        button:hover { background: transparent; color: var(--gold); }
+        h2 { color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
+        .socials { margin-top: 20px; display: flex; gap: 15px; }
+        .socials a { color: var(--gold); text-decoration: none; font-weight: bold; font-size: 0.8rem; }
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: var(--gray); border: 1px solid var(--gold); color: white; }
+        button { padding: 18px; background: var(--gold); width: 100%; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="specials.html">Specials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
         </nav>
         <div class="brand-block">
             <span class="brand-name">New Hair Images</span>
@@ -43,29 +32,15 @@
         </div>
     </header>
     <div class="container">
-        <div class="info-box">
-            <h2>Get In Touch</h2>
-            <h3>Address</h3>
-            <p><a href="https://maps.google.com/?q=61+Albertyn+Street+Vorna+Valley+Midrand" target="_blank">61 Albertyn Street, Vorna Valley, Midrand</a></p>
-            <h3>Contact</h3>
-            <p><a href="tel:0727666313">072 766 6313</a></p>
-            <h3>Email</h3>
-            <p>Simangele2322@gmail.com</p>
-            
-            <div class="social-links">
-                <a href="#">INSTAGRAM</a>
-                <a href="#">FACEBOOK</a>
-                <a href="https://wa.me/27727666313" target="_blank">WHATSAPP</a>
-            </div>
+        <div class="info">
+            <h2>Find Us</h2>
+            <p>61 Albertyn Street, Vorna Valley, Midrand[cite: 1]</p>
+            <p>Tel: 072 766 6313</p>
+            <div class="socials"><a href="#">INSTAGRAM</a><a href="#">FACEBOOK</a><a href="https://wa.me/27727666313">WHATSAPP</a></div>
         </div>
-        <div class="form-box">
+        <div class="form">
             <h2>Message Us</h2>
-            <form>
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email Address" required>
-                <textarea rows="4" placeholder="Job Inquiry or Booking Request"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <form><input type="text" placeholder="Name"><input type="email" placeholder="Email"><textarea placeholder="Message"></textarea><button>Send</button></form>
         </div>
     </div>
 </body>
