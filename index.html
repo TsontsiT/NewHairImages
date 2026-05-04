@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | New Hair Images</title>
+    <style>
+        :root { --gold: #D4AF37; --black: #000000; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--black); color: var(--white); }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin-right: 25px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+        .brand-block { display: flex; align-items: center; gap: 20px; }
+        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-container img { height: 120px; width: auto; display: block; }
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920'); background-size: cover; padding: 20px; }
+        .hero h1 { font-size: 4rem; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
+        .btn { padding: 15px 40px; background: var(--gold); color: black; text-decoration: none; font-weight: bold; text-transform: uppercase; border: 2px solid var(--gold); transition: 0.3s; }
+        .btn:hover { background: transparent; color: var(--gold); }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="brand-block">
+            <span class="brand-name">New Hair Images</span>
+            <div class="logo-container">
+                <img src="1000142962.jpg" alt="New Hair Images Logo">
+            </div>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>New Hair Images</h1>
+        <p style="margin-bottom: 30px; font-size: 1.4rem;">Masterful Styling. Premium Experience.</p>
+        <a href="contact.html" class="btn">Book Appointment</a>
+    </section>
+</body>
+</html>

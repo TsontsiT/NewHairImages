@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | New Hair Images</title>
+    <style>
+        :root { --gold: #D4AF37; --black: #000000; --white: #ffffff; --gray: #1a1a1a; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--black); color: var(--white); }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin-right: 25px; font-weight: bold; text-transform: uppercase; }
+        .brand-block { display: flex; align-items: center; gap: 20px; }
+        .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-container img { height: 120px; }
+        .container { padding: 60px 10%; }
+        h2 { color: var(--gold); text-align: center; margin-bottom: 40px; font-size: 2.5rem; text-transform: uppercase; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .gallery-item { height: 350px; background-color: var(--gray); overflow: hidden; border: 1px solid var(--gold); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item img:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="brand-block">
+            <span class="brand-name">New Hair Images</span>
+            <div class="logo-container">
+                <img src="1000142962.jpg" alt="New Hair Images Logo">
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Style Showcase</h2>
+        <div class="gallery-grid">
+            <!-- 8 Sample Images -->
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600" alt="Style 1"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=600" alt="Style 2"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?q=80&w=600" alt="Style 3"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?q=80&w=600" alt="Style 4"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?q=80&w=600" alt="Style 5"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?q=80&w=600" alt="Style 6"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503910321442-d15947a33b62?q=80&w=600" alt="Style 7"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=600" alt="Style 8"></div>
+        </div>
+    </div>
+</body>
+</html>
