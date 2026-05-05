@@ -3,102 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This Month's Specials | New Hair Images</title>
+    <title>Specials | New Hair Images</title>
     <style>
         :root { --gold: #D4AF37; --black: #000000; --white: #ffffff; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background: var(--black); color: var(--white); }
         header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
+        nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.85rem; }
         .brand-block { display: flex; align-items: center; gap: 20px; }
         .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
         .logo-container img { height: 120px; }
-        
         .container { padding: 60px 10%; }
-        h2 { color: var(--gold); text-align: center; margin-bottom: 10px; font-size: 2.5rem; text-transform: uppercase; }
+        h2 { color: var(--gold); text-align: center; font-size: 2.5rem; text-transform: uppercase; }
         .subtitle { text-align: center; color: #888; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 2px; }
-
         .specials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .special-card { background: var(--gray); border: 1px solid var(--gold); overflow: hidden; display: flex; flex-direction: column; }
+        .special-card { background: var(--gray); border: 1px solid var(--gold); display: flex; flex-direction: column; }
         .special-img { height: 250px; background-size: cover; background-position: center; border-bottom: 2px solid var(--gold); }
         .special-info { padding: 25px; text-align: center; flex-grow: 1; }
-        .special-info h3 { color: var(--gold); text-transform: uppercase; margin-bottom: 15px; font-size: 1.4rem; }
-        .special-info p { color: #ccc; margin-bottom: 20px; font-size: 0.95rem; }
-        .tag { display: inline-block; background: var(--gold); color: black; padding: 5px 15px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase; font-size: 0.8rem; }
-        
-        .btn-book { display: block; width: 100%; padding: 15px; background: transparent; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        .special-info h3 { color: var(--gold); text-transform: uppercase; margin-bottom: 15px; }
+        .tag { display: inline-block; background: var(--gold); color: black; padding: 5px 15px; font-weight: bold; margin-bottom: 15px; font-size: 0.8rem; }
+        .btn-book { display: block; padding: 15px; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
         .btn-book:hover { background: var(--gold); color: black; }
+        footer { padding: 40px 10%; background: #000; border-top: 1px solid #333; text-align: center; color: #666; font-size: 0.85rem; }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="specials.html">Specials</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="specials.html">Specials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
         </nav>
         <div class="brand-block">
             <span class="brand-name">New Hair Images</span>
-            <div class="logo-container">
-                <img src="1000142962.jpg" alt="Logo">
-            </div>
+            <div class="logo-container"><img src="1000142962.jpg" alt="Logo"></div>
         </div>
     </header>
-
     <div class="container">
         <h2>This Month's Specials</h2>
         <p class="subtitle">Exclusive Midrand Offers</p>
-
         <div class="specials-grid">
-            <!-- Offer 1: Manicures -->
             <article class="special-card">
                 <div class="special-img" style="background-image: url('special_mani.jpg');"></div>
                 <div class="special-info">
                     <span class="tag">Save 25%</span>
                     <h3>Signature Manicures</h3>
-                    <p>Treat your hands to our luxury treatment at 61 Albertyn Street[cite: 1]. Valid for all gel and acrylic sets this month.</p>
+                    <p>Treat your hands at 61 Albertyn Street[cite: 1]. Valid for all sets this month.</p>
                     <a href="contact.html" class="btn-book">Book Now</a>
                 </div>
             </article>
-
-            <!-- Offer 2: Wig Purchase -->
             <article class="special-card">
                 <div class="special-img" style="background-image: url('special_wig.jpg');"></div>
                 <div class="special-info">
                     <span class="tag">Free Installation</span>
                     <h3>Wig & Style Promo</h3>
-                    <p>Purchase any premium wig from our collection and receive a professional installation absolutely free of charge.</p>
+                    <p>Purchase any premium wig and receive professional installation free.</p>
                     <a href="contact.html" class="btn-book">Claim Offer</a>
-                </div>
-            </article>
-
-            <!-- Offer 3: Suggested - Midrand Gentlemen's Special -->
-            <article class="special-card">
-                <div class="special-img" style="background-image: url('special_barber.jpg');"></div>
-                <div class="special-info">
-                    <span class="tag">Complimentary Wash</span>
-                    <h3>Gentlemen's Executive</h3>
-                    <p>Book any precision fade or beard trim and enjoy a complimentary hot towel treatment and hair wash.</p>
-                    <a href="contact.html" class="btn-book">Book Now</a>
-                </div>
-            </article>
-
-            <!-- Offer 4: Suggested - New Client Special -->
-            <article class="special-card">
-                <div class="special-img" style="background-image: url('special_new.jpg');"></div>
-                <div class="special-info">
-                    <span class="tag">First Visit: R100 Off</span>
-                    <h3>New Client Welcome</h3>
-                    <p>New to Vorna Valley[cite: 1]? Welcome to the neighborhood with R100 off your first appointment over R400.</p>
-                    <a href="contact.html" class="btn-book">Get Voucher</a>
                 </div>
             </article>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2026 New Hair Images. Managed by StooshTech Concepts</p>
+        <p><a href="Privacy_Policy_New_Hair_Images.pdf" target="_blank" style="color: var(--gold); text-decoration: none;">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
