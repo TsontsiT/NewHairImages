@@ -7,63 +7,165 @@
     <style>
         :root { --gold: #D4AF37; --black: #000000; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background: var(--black); color: white; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 0 5%; height: 140px; border-bottom: 2px solid var(--gold); background: var(--black); position: sticky; top: 0; z-index: 1000; }
+        body { background: var(--black); color: white; line-height: 1.6; }
+
+        /* Navigation Header */
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 0 5%; 
+            height: 140px; 
+            border-bottom: 2px solid var(--gold); 
+            background: var(--black); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
         nav a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
         .brand-block { display: flex; align-items: center; gap: 20px; }
         .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; }
         .logo-container img { height: 120px; }
-        .container { padding: 80px 10%; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; max-width: 1400px; margin: 0 auto; }
+
+        /* Contact Container */
+        .container { 
+            padding: 80px 10%; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 60px; 
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Contact Info Styling */
         .contact-info h2 { color: var(--gold); font-size: 2.5rem; text-transform: uppercase; margin-bottom: 30px; }
         .info-block { margin-bottom: 40px; }
-        .info-block h3 { color: var(--gold); text-transform: uppercase; margin-bottom: 10px; font-size: 0.9rem; }
+        .info-block h3 { color: var(--gold); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px; }
+        .info-block p { font-size: 1.2rem; color: #ccc; margin-bottom: 5px; }
+
+        /* Form Styling */
         .contact-form { background: #111; padding: 40px; border: 1px solid #333; }
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; background: var(--gray); border: 1px solid #444; color: white; }
-        .consent-container { display: flex; gap: 12px; margin-bottom: 25px; font-size: 0.85rem; color: #aaa; }
-        button { background: var(--gold); color: black; padding: 18px 40px; border: none; font-weight: bold; text-transform: uppercase; width: 100%; cursor: pointer; transition: 0.3s; }
+        input, textarea { 
+            width: 100%; 
+            padding: 15px; 
+            margin-bottom: 20px; 
+            background: var(--gray); 
+            border: 1px solid #444; 
+            color: white; 
+            font-size: 1rem;
+        }
+        input:focus, textarea:focus { border-color: var(--gold); outline: none; }
+        
+        /* POPIA Consent Styling */
+        .consent-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .consent-container label { font-size: 0.85rem; color: #aaa; cursor: pointer; line-height: 1.4; }
+        .consent-container input[type="checkbox"] { 
+            width: 18px; 
+            height: 18px; 
+            margin-top: 2px;
+            cursor: pointer; 
+            accent-color: var(--gold);
+        }
+
+        button { 
+            background: var(--gold); 
+            color: black; 
+            padding: 18px 40px; 
+            border: none; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            width: 100%; 
+            transition: 0.3s;
+            letter-spacing: 1px;
+        }
         button:hover { background: #b8952e; }
+
+        /* Footer */
         footer { padding: 40px 10%; background: var(--black); border-top: 1px solid #333; text-align: center; color: #666; font-size: 0.8rem; }
+
+        /* Responsive Adjustments */
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; padding: 40px 5%; }
+            header { height: auto; flex-direction: column; padding: 20px 5%; text-align: center; }
+            .brand-block { flex-direction: column; gap: 10px; margin-bottom: 20px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 10px; }
+            .logo-container img { height: 80px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <nav>
-            <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="specials.html">Specials</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="specials.html">Specials</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <div class="brand-block">
             <span class="brand-name">New Hair Images</span>
             <div class="logo-container"><img src="1000142962.jpg" alt="Logo"></div>
         </div>
     </header>
+
     <div class="container">
+        <!-- Text Content Section -->
         <div class="contact-info">
             <h2>Connect With Us</h2>
+            
             <div class="info-block">
                 <h3>Our Location</h3>
-                <p>61 Albertyn Street, Vorna Valley[cite: 1]</p>
+                <p>61 Albertyn Street, Vorna Valley</p>
                 <p>Midrand, South Africa</p>
             </div>
+
             <div class="info-block">
                 <h3>Direct Contact</h3>
                 <p>Phone: 072 766 6313</p>
                 <p>Email: Simangele2322@gmail.com</p>
             </div>
+
+            <div class="info-block">
+                <h3>Business Hours</h3>
+                <p>Mon - Sat: 08:00 - 18:00</p>
+                <p>Sunday: Closed</p>
+            </div>
         </div>
+
+        <!-- POPIA Compliant Form Section -->
         <div class="contact-form">
             <form action="mailto:Simangele2322@gmail.com" method="post" enctype="text/plain">
                 <input type="text" name="Name" placeholder="Your Name" required>
                 <input type="email" name="Email" placeholder="Your Email Address" required>
-                <textarea name="Message" rows="5" placeholder="How can we help?"></textarea>
+                <textarea name="Message" rows="5" placeholder="How can we help? (Bookings or Chair Rental inquiries)"></textarea>
+                
                 <div class="consent-container">
-                    <input type="checkbox" id="popia" required>
-                    <label for="popia">I agree to data processing per the <a href="Privacy_Policy_New_Hair_Images.pdf" target="_blank" style="color: var(--gold);">Privacy Policy</a>.</label>
+                    <input type="checkbox" id="popia-consent" name="popia-consent" required>
+                    <label for="popia-consent">
+                        I agree to the processing of my personal data for communication purposes in accordance with the 
+                        <a href="privacy-policy.html" target="_blank" style="color: var(--gold); text-decoration: underline;">Privacy Policy</a>.
+                    </label>
                 </div>
+                
                 <button type="submit">Send Message</button>
             </form>
         </div>
     </div>
+
     <footer>
-        <p>&copy; 2026 New Hair Images. Managed by StooshTech Concepts.</p>
+        <p>&copy; 2026 New Hair Images. Licensed under South African Business Regulations.</p>
+        <p>Managed by StooshTech Concepts.</p>
     </footer>
+
 </body>
 </html>
