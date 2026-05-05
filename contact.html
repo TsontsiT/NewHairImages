@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | New Hair Images</title>
+    <title>Contact & Bookings | New Hair Images</title>
     <style>
         :root { --gold: #D4AF37; --black: #000000; --gray: #1a1a1a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
         body { background: var(--black); color: white; line-height: 1.6; }
 
-        /* Navigation Header */
         header { 
             display: flex; 
             justify-content: space-between; 
@@ -27,7 +26,6 @@
         .brand-name { color: var(--gold); font-size: 1.8rem; font-weight: bold; text-transform: uppercase; }
         .logo-container img { height: 120px; }
 
-        /* Contact Container */
         .container { 
             padding: 80px 10%; 
             display: grid; 
@@ -37,15 +35,14 @@
             margin: 0 auto;
         }
 
-        /* Contact Info Styling */
         .contact-info h2 { color: var(--gold); font-size: 2.5rem; text-transform: uppercase; margin-bottom: 30px; }
         .info-block { margin-bottom: 40px; }
-        .info-block h3 { color: var(--gold); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 1px; }
-        .info-block p { font-size: 1.2rem; color: #ccc; margin-bottom: 5px; }
+        .info-block h3 { color: var(--gold); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; }
+        .info-block p { font-size: 1.2rem; color: #ccc; }
 
         /* Form Styling */
         .contact-form { background: #111; padding: 40px; border: 1px solid #333; }
-        input, textarea { 
+        input, textarea, select { 
             width: 100%; 
             padding: 15px; 
             margin-bottom: 20px; 
@@ -54,25 +51,25 @@
             color: white; 
             font-size: 1rem;
         }
-        input:focus, textarea:focus { border-color: var(--gold); outline: none; }
+        input:focus, textarea:focus, select:focus { border-color: var(--gold); outline: none; }
         
-        /* POPIA Consent Styling */
-        .consent-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            text-align: left;
-            margin-bottom: 25px;
-        }
-        .consent-container label { font-size: 0.85rem; color: #aaa; cursor: pointer; line-height: 1.4; }
-        .consent-container input[type="checkbox"] { 
-            width: 18px; 
-            height: 18px; 
-            margin-top: 2px;
-            cursor: pointer; 
-            accent-color: var(--gold);
+        /* Conditional Fields (Hidden by default) */
+        .conditional-field {
+            display: none;
+            border-left: 2px solid var(--gold);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.4s ease;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .consent-container { display: flex; gap: 12px; margin-bottom: 25px; align-items: flex-start; }
+        .consent-container label { font-size: 0.85rem; color: #aaa; }
+        
         button { 
             background: var(--gold); 
             color: black; 
@@ -83,20 +80,13 @@
             cursor: pointer; 
             width: 100%; 
             transition: 0.3s;
-            letter-spacing: 1px;
         }
         button:hover { background: #b8952e; }
 
-        /* Footer */
         footer { padding: 40px 10%; background: var(--black); border-top: 1px solid #333; text-align: center; color: #666; font-size: 0.8rem; }
 
-        /* Responsive Adjustments */
         @media (max-width: 900px) {
-            .container { grid-template-columns: 1fr; padding: 40px 5%; }
-            header { height: auto; flex-direction: column; padding: 20px 5%; text-align: center; }
-            .brand-block { flex-direction: column; gap: 10px; margin-bottom: 20px; }
-            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 10px; }
-            .logo-container img { height: 80px; }
+            .container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -119,41 +109,52 @@
     </header>
 
     <div class="container">
-        <!-- Text Content Section -->
         <div class="contact-info">
             <h2>Connect With Us</h2>
-            
             <div class="info-block">
                 <h3>Our Location</h3>
-                <p>61 Albertyn Street, Vorna Valley</p>
-                <p>Midrand, South Africa</p>
+                <p>61 Albertyn Street, Vorna Valley[cite: 1, 5, 6]</p>
+                <p>Midrand, South Africa[cite: 5, 6]</p>
             </div>
-
             <div class="info-block">
                 <h3>Direct Contact</h3>
-                <p>Phone: 072 766 6313</p>
-                <p>Email: Simangele2322@gmail.com</p>
-            </div>
-
-            <div class="info-block">
-                <h3>Business Hours</h3>
-                <p>Mon - Sat: 08:00 - 18:00</p>
-                <p>Sunday: Closed</p>
+                <p>Phone: 072 766 6313[cite: 5, 6]</p>
+                <p>Email: Simangele2322@gmail.com[cite: 5, 6]</p>
             </div>
         </div>
 
-        <!-- POPIA Compliant Form Section -->
         <div class="contact-form">
             <form action="mailto:Simangele2322@gmail.com" method="post" enctype="text/plain">
                 <input type="text" name="Name" placeholder="Your Name" required>
                 <input type="email" name="Email" placeholder="Your Email Address" required>
-                <textarea name="Message" rows="5" placeholder="How can we help? (Bookings or Chair Rental inquiries)"></textarea>
+                
+                <!-- Inquiry Dropdown -->
+                <select id="inquiry-type" name="Inquiry_Type" required>
+                    <option value="" disabled selected>How can we help?</option>
+                    <option value="appointment">Book an Appointment</option>
+                    <option value="rental">Rent a Chair</option>
+                    <option value="general">General Inquiry</option>
+                </select>
+
+                <!-- Appointment Calendar Field -->
+                <div id="appointment-field" class="conditional-field">
+                    <label style="display:block; margin-bottom:10px; font-size: 0.8rem; color: var(--gold);">Select Preferred Date</label>
+                    <input type="date" name="Preferred_Date" id="date-input">
+                </div>
+
+                <!-- Chair Rental Field -->
+                <div id="rental-field" class="conditional-field">
+                    <label style="display:block; margin-bottom:10px; font-size: 0.8rem; color: var(--gold);">Number of Chairs (1-8)</label>
+                    <input type="number" name="Chair_Count" id="chair-input" min="1" max="8" placeholder="How many chairs?">
+                </div>
+
+                <textarea name="Message" rows="5" placeholder="Additional Details..."></textarea>
                 
                 <div class="consent-container">
                     <input type="checkbox" id="popia-consent" name="popia-consent" required>
                     <label for="popia-consent">
-                        I agree to the processing of my personal data for communication purposes in accordance with the 
-                        <a href="Privacy_Policy_New_Hair_Images.pdf" target="_blank" style="color: var(--gold); text-decoration: underline;">Privacy Policy</a>.
+                        I agree to the processing of my personal data per the 
+                        <a href="Privacy_Policy_New_Hair_Images.pdf" target="_blank" style="color: var(--gold);">Privacy Policy</a>.[cite: 1, 5]
                     </label>
                 </div>
                 
@@ -163,9 +164,33 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 New Hair Images. Licensed under South African Business Regulations.</p>
-        <p>Managed by StooshTech Concepts.</p>
+        <p>&copy; 2026 New Hair Images. 61 Albertyn Street, Vorna Valley, Midrand.[cite: 5, 6]</p>
+        <p>Managed by StooshTech Concepts.[cite: 5]</p>
     </footer>
 
+    <script>
+        const inquirySelect = document.getElementById('inquiry-type');
+        const appointmentField = document.getElementById('appointment-field');
+        const rentalField = document.getElementById('rental-field');
+        const dateInput = document.getElementById('date-input');
+        const chairInput = document.getElementById('chair-input');
+
+        inquirySelect.addEventListener('change', function() {
+            // Reset visibility
+            appointmentField.style.display = 'none';
+            rentalField.style.display = 'none';
+            dateInput.required = false;
+            chairInput.required = false;
+
+            // Toggle based on selection
+            if (this.value === 'appointment') {
+                appointmentField.style.display = 'block';
+                dateInput.required = true;
+            } else if (this.value === 'rental') {
+                rentalField.style.display = 'block';
+                chairInput.required = true;
+            }
+        });
+    </script>
 </body>
 </html>
